@@ -7,6 +7,7 @@ dependencyResolutionManagement {
     // Use Maven Central as the default repository (where Gradle will download dependencies) in all subprojects.
     @Suppress("UnstableApiUsage")
     repositories {
+        gradlePluginPortal() // For spotbugs-gradle-plugin and other Gradle plugins
         mavenCentral()
     }
 }
@@ -23,3 +24,4 @@ include(":app")
 include(":utils")
 
 rootProject.name = "gradle-convention-plugin"
+include("demo-test-plugin")
